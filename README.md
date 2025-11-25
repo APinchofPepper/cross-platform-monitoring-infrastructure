@@ -6,6 +6,31 @@ A monitoring setup for Windows Server and Ubuntu VMs using industry-standard mon
 
 This project sets up monitoring infrastructure for both Windows Server and Ubuntu virtual machines. The goal is to monitor system health metrics (CPU, memory, disk) and configure alerts for proactive system management.
 
+## Environment Setup (Windows + Linux)
+
+### What You Do
+
+- Spin up Windows Server 2019/2022 VM
+- Spin up Ubuntu Server 22.04 VM
+- Assign static IPs
+- Document network layout
+- Confirm ICMP/WinRM and SSH connections
+
+### Network Configuration
+
+This setup uses **bridged network mode** with the following static IP addresses:
+
+- **AD Server (Windows)**: `192.168.56.20`
+- **Ubuntu Server**: `192.168.56.21`
+
+### Screenshots
+
+Screenshots documenting the environment setup and connectivity tests are available in the `/screenshots` folder:
+
+- `vm-list.png` - Virtual machine list
+- `windows-to-ubuntu-ping-test.png` - ICMP connectivity test from Windows to Ubuntu
+- `ubuntu-to-windows-ping-test.png` - ICMP connectivity test from Ubuntu to Windows
+
 ## What's Included
 
 - **Infrastructure Setup**: Configuration for Windows Server and Ubuntu VM deployment
